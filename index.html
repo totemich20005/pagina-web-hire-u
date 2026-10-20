@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hire-U conecta estudiantes y egresados con oportunidades laborales.">
+  <title>Hire-U | Oportunidades para tu futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#vacantes">Ir a las vacantes</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Hire-U, inicio">
+        <img class="header-logo" src="assets/logo-hire-u.png" alt="Hire-U">
+      </a>
+
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+        <a class="active" href="#vacantes">Buscar empleos</a>
+        <a href="#empresas">Empresas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="registro-egresado.html">Registro de egresado</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="button button-ghost" type="button" data-open-login>Iniciar sesión</button>
+        <a class="button button-primary" href="registro-egresado.html">Crear perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="hero-decoration hero-decoration-one"></div>
+      <div class="hero-decoration hero-decoration-two"></div>
+      <div class="hero-content">
+        <img class="hero-logo" src="assets/logo-hire-u.png" alt="Hire-U, tu camino laboral empieza aquí">
+        <p class="eyebrow">Tu talento merece una gran oportunidad</p>
+        <h1>Da el siguiente paso en tu <span>futuro profesional</span></h1>
+        <p class="hero-copy">Encuentra prácticas, empleos junior y oportunidades para egresados. Todo en un solo lugar.</p>
+
+        <form class="hero-search" id="heroSearch" role="search">
+          <label class="search-field">
+            <span class="field-icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Cargo o palabra clave</span>
+            <input id="heroKeyword" type="search" placeholder="Cargo, área o palabra clave">
+          </label>
+          <span class="search-divider" aria-hidden="true"></span>
+          <label class="search-field">
+            <span class="field-icon" aria-hidden="true">⌖</span>
+            <span class="sr-only">Ciudad</span>
+            <input id="heroLocation" type="search" placeholder="Ciudad o modalidad">
+          </label>
+          <button class="button button-search" type="submit">Buscar empleos</button>
+        </form>
+
+        <div class="popular-searches" aria-label="Búsquedas populares">
+          <span>Popular:</span>
+          <button type="button" data-quick-search="Software">Software</button>
+          <button type="button" data-quick-search="Marketing">Marketing</button>
+          <button type="button" data-quick-search="Diseño">Diseño</button>
+          <button type="button" data-quick-search="Administración">Administración</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Resumen de la plataforma">
+      <div><strong id="jobCountStat">12</strong><span>Vacantes activas</span></div>
+      <div><strong>+40</strong><span>Empresas aliadas</span></div>
+      <div><strong>8</strong><span>Áreas profesionales</span></div>
+      <div><strong>100%</strong><span>Enfocado en talento joven</span></div>
+    </section>
+
+    <section class="jobs-section" id="vacantes">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow dark">Explora oportunidades</p>
+          <h2>Vacantes que impulsan tu carrera</h2>
+          <p>Filtra las ofertas y encuentra la que mejor encaje contigo.</p>
+        </div>
+        <button class="filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="filtersPanel">Filtros</button>
+      </div>
+
+      <div class="jobs-layout">
+        <aside class="filters-panel" id="filtersPanel" aria-label="Filtros de búsqueda">
+          <div class="filters-header">
+            <h3>Filtrar resultados</h3>
+            <button id="clearFilters" class="text-button" type="button">Limpiar</button>
+          </div>
+
+          <label class="filter-label" for="filterKeyword">Palabra clave</label>
+          <input class="filter-input" id="filterKeyword" type="search" placeholder="Ej. Analista">
+
+          <label class="filter-label" for="filterLocation">Ubicación</label>
+          <select class="filter-input" id="filterLocation">
+            <option value="">Todas las ubicaciones</option>
+            <option>Bogotá</option>
+            <option>Medellín</option>
+            <option>Cali</option>
+            <option>Barranquilla</option>
+            <option>Colombia</option>
+          </select>
+
+          <fieldset>
+            <legend>Modalidad</legend>
+            <label class="check-row"><input type="checkbox" name="modality" value="Remoto"><span>Remoto</span></label>
+            <label class="check-row"><input type="checkbox" name="modality" value="Híbrido"><span>Híbrido</span></label>
+            <label class="check-row"><input type="checkbox" name="modality" value="Presencial"><span>Presencial</span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tipo de oportunidad</legend>
+            <label class="check-row"><input type="checkbox" name="type" value="Tiempo completo"><span>Tiempo completo</span></label>
+            <label class="check-row"><input type="checkbox" name="type" value="Prácticas"><span>Prácticas</span></label>
+            <label class="check-row"><input type="checkbox" name="type" value="Primer empleo"><span>Primer empleo</span></label>
+          </fieldset>
+
+          <button class="button button-primary full-width" id="applyFilters" type="button">Aplicar filtros</button>
+        </aside>
+
+        <div class="jobs-content">
+          <div class="results-toolbar">
+            <p><strong id="resultsCount">0</strong> oportunidades encontradas</p>
+            <label>
+              <span>Ordenar:</span>
+              <select id="sortJobs" aria-label="Ordenar vacantes">
+                <option value="recent">Más recientes</option>
+                <option value="title">Cargo A-Z</option>
+                <option value="company">Empresa A-Z</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="jobs-grid" id="jobsGrid" aria-live="polite"></div>
+
+          <div class="empty-state" id="emptyState" hidden>
+            <div aria-hidden="true">⌕</div>
+            <h3>No encontramos vacantes con esos filtros</h3>
+            <p>Prueba con otra palabra clave o limpia los filtros.</p>
+            <button class="button button-primary" type="button" id="emptyClear">Ver todas las vacantes</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies-section" id="empresas">
+      <div class="section-heading centered">
+        <div>
+          <p class="eyebrow dark">Compañías que buscan talento</p>
+          <h2>Empresas destacadas</h2>
+          <p>Descubre organizaciones con oportunidades para comenzar o fortalecer tu carrera.</p>
+        </div>
+      </div>
+      <div class="company-grid">
+        <article class="company-card"><span class="company-logo microsoft">M</span><div><h3>Microsoft</h3><p>Tecnología</p></div><span>4 vacantes</span></article>
+        <article class="company-card"><span class="company-logo alcon">A</span><div><h3>Alcon</h3><p>Salud</p></div><span>3 vacantes</span></article>
+        <article class="company-card"><span class="company-logo mercado">M</span><div><h3>Mercado Libre</h3><p>Comercio digital</p></div><span>2 vacantes</span></article>
+        <article class="company-card"><span class="company-logo banco">B</span><div><h3>Bancolombia</h3><p>Servicios financieros</p></div><span>3 vacantes</span></article>
+      </div>
+    </section>
+
+    <section class="how-section" id="como-funciona">
+      <div class="section-heading centered">
+        <div>
+          <p class="eyebrow dark">Fácil, rápido y enfocado en ti</p>
+          <h2>Tu próxima oportunidad en tres pasos</h2>
+        </div>
+      </div>
+      <div class="steps-grid">
+        <article><span>01</span><div class="step-icon">♙</div><h3>Crea tu perfil</h3><p>Presenta tu formación, habilidades y experiencia en un perfil profesional.</p></article>
+        <article><span>02</span><div class="step-icon">⌕</div><h3>Encuentra vacantes</h3><p>Busca oportunidades por área, ubicación, modalidad y tipo de empleo.</p></article>
+        <article><span>03</span><div class="step-icon">✓</div><h3>Postúlate</h3><p>Revisa los detalles de la oferta y envía tu candidatura directamente.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p class="eyebrow">Empieza hoy</p>
+        <h2>El futuro que buscas puede comenzar aquí</h2>
+        <p>Crea tu perfil, muestra tu talento y conecta con oportunidades pensadas para estudiantes y egresados.</p>
+      </div>
+      <a class="button button-light" href="registro-egresado.html">Registrarme como egresado</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#inicio"><img class="footer-logo" src="assets/logo-hire-u.png" alt="Hire-U, tu camino laboral empieza aquí"></a>
+        <p>Conectamos talento joven con oportunidades que transforman carreras.</p>
+      </div>
+      <div><h3>Explorar</h3><a href="#vacantes">Buscar empleos</a><a href="#empresas">Empresas</a><a href="#como-funciona">Cómo funciona</a></div>
+      <div><h3>Candidatos</h3><a href="registro-egresado.html">Crear perfil</a><button type="button" data-open-login>Iniciar sesión</button><a href="#vacantes">Vacantes recientes</a></div>
+      <div><h3>Contacto</h3><a href="mailto:contacto@hire-u.co">contacto@hire-u.co</a><span>Bogotá, Colombia</span></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Hire-U. Todos los derechos reservados.</span><span>Hecho para impulsar el talento.</span></div>
+  </footer>
+
+  <dialog class="job-modal" id="jobModal">
+    <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+    <div id="jobModalContent"></div>
+  </dialog>
+
+  <dialog class="login-modal" id="loginModal">
+    <button class="modal-close" type="button" data-close-login aria-label="Cerrar">×</button>
+    <div class="login-header"><span class="brand-mark">H</span><h2>Bienvenido a Hire-U</h2><p>Ingresa para gestionar tu perfil y tus postulaciones.</p></div>
+    <form id="loginForm">
+      <label>Correo electrónico<input type="email" required placeholder="nombre@correo.com"></label>
+      <label>Contraseña<input type="password" required minlength="6" placeholder="••••••••"></label>
+      <button class="button button-primary full-width" type="submit">Iniciar sesión</button>
+      <p class="form-message" id="loginMessage"></p>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
